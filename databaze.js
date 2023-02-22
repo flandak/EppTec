@@ -42,7 +42,6 @@ pool.query(sqlQuery, (error, response) => {
           isValueValid = true;
         }
       }
-
       // Pokud hodnota splňuje kritéria filtru, přidejte ji do pole filtrovaných hodnot; jinak přidejte do pole odmítnutých hodnot
       if (isValueValid) {
         filteredValues.push(value);
@@ -50,12 +49,10 @@ pool.query(sqlQuery, (error, response) => {
         filterValue.push(value);
       }
     });
-
     // Pokud byly odmítnuty nějaké hodnoty, vypište je do konzole
     if (filterValue.length > 0) {
       console.log(filterValue);
     }
-
     // Vypište filtrované hodnoty do konzole
     console.log(filteredValues);
   }

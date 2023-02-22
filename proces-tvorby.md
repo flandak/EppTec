@@ -1,4 +1,4 @@
-*Jak vytvořit dotaz SQL:* 
+*Jak vytvořit dotaz SQL v terminálu:* 
 node nazev databáze, název sloupce, hodnota filtru a operátoru porovnání
 příklad: node database.js ucet UCET_ID 8 "<"
 
