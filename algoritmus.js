@@ -1,4 +1,7 @@
 let pole = [5, 10, 15, 20, 25, 30];
+const argumenty = require("yargs").argv;
+const filtrovanePole = pole.filter(eval(argumenty.filtr));
+console.log(filtrovanePole);
 
 const FILTR = "--filtr";
 const PRAVIDLO = "--pravidlo";
