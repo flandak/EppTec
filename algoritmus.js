@@ -1,18 +1,11 @@
 let pole = [5, 10, 15, 20, 25, 30];
-const argumenty = require("yargs").argv;
-const filtrovanePole = pole.filter(eval(argumenty.filtr));
-console.log(filtrovanePole);
 
-const FILTR = "--filtr";
 const PRAVIDLO = "--pravidlo";
 
 // získání hodnoty parametru pro filtr a pravidlo z příkazové řádky
 let filtrHodnota = null;
 let pravidloHodnota = null;
 process.argv.forEach((argument, index) => {
-  if (argument === FILTR && index < process.argv.length - 1) {
-    filtrHodnota = parseInt(process.argv[index + 1]);
-  }
   if (argument === PRAVIDLO && index < process.argv.length - 1) {
     pravidloHodnota = process.argv[index + 1];
   }
